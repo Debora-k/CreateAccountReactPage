@@ -32,7 +32,7 @@ function App() {
     // Implement this function
     setFirstName("");
     setLastName("");
-    setPassword({ value: '', isTouched: false });
+    setPassword({ value: "", isTouched: false });
     setEmail("");
     setRole("role");
   };
@@ -69,7 +69,7 @@ function App() {
             <label>
               Password <sup>*</sup>
             </label>
-            <input placeholder="Password" type="password" value={password.value} onChange={(e) => setPassword({value:e.target.value, isTouched:true})} />
+            <input placeholder="Password" type="password" value={password.value} onChange={(e) => setPassword({...password, value:e.target.value})} />
             {password.value.length < 8 && password.isTouched == true && <PasswordErrorMessage />}
           </div>
           <div className="Field">
