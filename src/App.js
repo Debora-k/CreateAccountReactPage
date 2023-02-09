@@ -21,10 +21,11 @@ function App() {
 
   const getIsFormValid = () => {
     // Implement this function
-    if (firstName.length > 0 && validateEmail(email) && email.length > 0 && password.length >= 8 && (role === 'individual' || role === 'business')) {
+    if (firstName.length > 0 && validateEmail(email) && email.length > 0 && password.value.length >= 8 && (role === 'individual' || role === 'business')) {
       return true;
+    } else {
+        return false;
     }
-    return false;
   };
 
   const clearForm = () => {
